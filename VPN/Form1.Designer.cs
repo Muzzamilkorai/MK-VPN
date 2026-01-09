@@ -50,7 +50,6 @@ namespace VPN
             this.txtLicenseKey = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.EXIT = new System.Windows.Forms.Button();
-            this.leftBrandPanel = new VPN.GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rightCard = new System.Windows.Forms.Panel();
@@ -66,6 +65,7 @@ namespace VPN
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.leftBrandPanel = new VPN.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,6 +164,7 @@ namespace VPN
             this.button1.TabIndex = 13;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // EXIT
             // 
@@ -178,16 +179,6 @@ namespace VPN
             this.EXIT.Text = "Exit";
             this.EXIT.UseVisualStyleBackColor = false;
             this.EXIT.Visible = false;
-            // 
-            // leftBrandPanel
-            // 
-            this.leftBrandPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftBrandPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(40)))));
-            this.leftBrandPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
-            this.leftBrandPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftBrandPanel.Name = "leftBrandPanel";
-            this.leftBrandPanel.Size = new System.Drawing.Size(0, 477);
-            this.leftBrandPanel.TabIndex = 1;
             // 
             // label3
             // 
@@ -237,7 +228,7 @@ namespace VPN
             this.rightCard.Controls.Add(this.registerLabel);
             this.rightCard.Location = new System.Drawing.Point(0, 0);
             this.rightCard.Name = "rightCard";
-            this.rightCard.Padding = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.rightCard.Padding = new System.Windows.Forms.Padding(19);
             this.rightCard.Size = new System.Drawing.Size(514, 477);
             this.rightCard.TabIndex = 2;
             // 
@@ -404,10 +395,20 @@ namespace VPN
             this.versionLabel.TabIndex = 23;
             this.versionLabel.Text = "Version 2.0";
             // 
+            // leftBrandPanel
+            // 
+            this.leftBrandPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftBrandPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(40)))));
+            this.leftBrandPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.leftBrandPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftBrandPanel.Name = "leftBrandPanel";
+            this.leftBrandPanel.Size = new System.Drawing.Size(0, 477);
+            this.leftBrandPanel.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.pictureBox1.BackgroundImage = global::VPN.Properties.Resources.Logo;
+            this.pictureBox1.BackgroundImage = global::VPN.Properties.Resources.MK_VPN_transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(206, 17);
             this.pictureBox1.Name = "pictureBox1";

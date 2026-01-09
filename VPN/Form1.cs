@@ -24,8 +24,8 @@ namespace VPN
         private bool showingLoading = false;
         
         private bool isRegisterMode = false;
-        private string credentialsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MAXGG VPN", "credentials.dat");
-        private string hwidFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MAXGG VPN", "hwid.dat");
+        private string credentialsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MK VPN", "credentials.dat");
+        private string hwidFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MK VPN", "hwid.dat");
         
         private System.Windows.Forms.Timer modeSwitchTimer;
         private bool isAnimating = false;
@@ -89,7 +89,7 @@ namespace VPN
             {
                 MessageBox.Show("Please enter both username and password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (username == "mcsadmin" && password == "maxeyxo123")
+            else if (username == "mkadmin" && password == "mk123")
             {
                 await StartAnimatedTransition();
             }
@@ -197,8 +197,8 @@ namespace VPN
 
                     var authData = new
                     {
-                        name = "MAXGG VPN",
-                        id = "8337be641e91da555b6a",
+                        name = "Name",
+                        id = "YourID",
                         email = email,
                         password = password,
                         license_key = licenseKey
@@ -299,8 +299,8 @@ namespace VPN
 
                     var keyData = new
                     {
-                        name = "MAXGG VPN",
-                        id = "8337be641e91da555b6a",
+                        name = "Name",
+                        id = "YourID",
                         license_key = licenseKey,
                         key = licenseKey,
                         licensekey = licenseKey
@@ -510,7 +510,7 @@ namespace VPN
                 string plan = "Premium";
                 
                 DateTime expiryDate;
-                string userInfoFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MAXGG VPN", "userinfo.dat");
+                string userInfoFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MK VPN", "userinfo.dat");
                 if (System.IO.File.Exists(userInfoFile))
                 {
                     string existingInfo = System.IO.File.ReadAllText(userInfoFile);
@@ -733,11 +733,11 @@ namespace VPN
 
         private void ShowMainForm()
         {
-            //Form2 mainForm = new Form2();
-            //mainForm.Opacity = 0;
-            //mainForm.Show();
-            
-         //   AnimateFormFadeIn(mainForm);
+            Form2 mainForm = new Form2();
+            mainForm.Opacity = 0;
+            mainForm.Show();
+
+            AnimateFormFadeIn(mainForm);
         }
 
         private void AnimateFormFadeIn(Form form)
@@ -873,6 +873,56 @@ namespace VPN
                 return false;
             }
         }
+
+        private async void button1_Click_2(object sender, EventArgs e)
+        {
+            string username = txtUserName.Text.Trim();
+            string password = TextPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter email and password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            bool isValidAuth = await ValidateLoginCredentials(username, password);
+
+            if (isValidAuth && File.Exists(hwidFile))
+            {
+                string hwidData = File.ReadAllText(hwidFile);
+                string[] parts = hwidData.Split('|');
+                if (parts.Length == 2)
+                {
+                    string storedLicenseKey = parts[0];
+                    if (!ValidateHWID(storedLicenseKey))
+                    {
+                        MessageBox.Show("Hardware ID mismatch! This license key is locked to different hardware.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+            }
+
+            if (isValidAuth)
+            {
+                if (rememberCheck.Checked)
+                {
+                    SaveCredentials(username, password);
+                }
+
+                StoreUserInformation(username);
+
+                await StartAnimatedTransition();
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials. Please check your email and password.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+      
+
+
+
     }
 }
 

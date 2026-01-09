@@ -37,52 +37,59 @@ namespace VPN
 
         private void InitializeComponent()
         {
-            welcomeLabel = new Label();
-            loadingLabel = new Label();
-            loadingPanel = new Panel();
-            SuspendLayout();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.loadingLabel = new System.Windows.Forms.Label();
+            this.loadingPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.welcomeLabel.ForeColor = System.Drawing.Color.White;
+            this.welcomeLabel.Location = new System.Drawing.Point(0, 78);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(429, 43);
+            this.welcomeLabel.TabIndex = 0;
+            this.welcomeLabel.Text = "Welcome to MK VPN!";
+            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // loadingLabel
+            // 
+            this.loadingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.loadingLabel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.loadingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.loadingLabel.Location = new System.Drawing.Point(0, 147);
+            this.loadingLabel.Name = "loadingLabel";
+            this.loadingLabel.Size = new System.Drawing.Size(429, 22);
+            this.loadingLabel.TabIndex = 1;
+            this.loadingLabel.Text = "Loading";
+            this.loadingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // loadingPanel
+            // 
+            this.loadingPanel.BackColor = System.Drawing.Color.Transparent;
+            this.loadingPanel.Location = new System.Drawing.Point(171, 182);
+            this.loadingPanel.Name = "loadingPanel";
+            this.loadingPanel.Size = new System.Drawing.Size(86, 35);
+            this.loadingPanel.TabIndex = 2;
+            // 
+            // LoadingForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.ClientSize = new System.Drawing.Size(429, 260);
+            this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.loadingLabel);
+            this.Controls.Add(this.loadingPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "LoadingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loading";
+            this.TopMost = true;
+            this.ResumeLayout(false);
 
-            welcomeLabel.BackColor = Color.Transparent;
-            welcomeLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            welcomeLabel.ForeColor = Color.White;
-            welcomeLabel.Location = new Point(0, 90);
-            welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(500, 50);
-            welcomeLabel.TabIndex = 0;
-            welcomeLabel.Text = "Welcome to MAXGG VPN!";
-            welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
-
-            loadingLabel.BackColor = Color.Transparent;
-            loadingLabel.Font = new Font("Segoe UI", 12F);
-            loadingLabel.ForeColor = Color.FromArgb(200, 200, 200);
-            loadingLabel.Location = new Point(0, 170);
-            loadingLabel.Name = "loadingLabel";
-            loadingLabel.Size = new Size(500, 25);
-            loadingLabel.TabIndex = 1;
-            loadingLabel.Text = "Loading";
-            loadingLabel.TextAlign = ContentAlignment.MiddleCenter;
-
-            loadingPanel.BackColor = Color.Transparent;
-            loadingPanel.Location = new Point(200, 210);
-            loadingPanel.Name = "loadingPanel";
-            loadingPanel.Size = new Size(100, 40);
-            loadingPanel.TabIndex = 2;
-            loadingPanel.Paint += LoadingPanel_Paint;
-
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(12, 18, 34);
-            ClientSize = new Size(500, 300);
-            Controls.Add(welcomeLabel);
-            Controls.Add(loadingLabel);
-            Controls.Add(loadingPanel);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "LoadingForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Loading";
-            TopMost = true;
-            Load += LoadingForm_Load;
-            ResumeLayout(false);
         }
 
         private void SetupLoadingAnimation()

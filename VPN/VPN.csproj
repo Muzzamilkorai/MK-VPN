@@ -60,6 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="GradientPanel.cs" />
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
@@ -71,6 +77,10 @@
     <Compile Include="RoundedPanel.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -104,6 +114,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MK_VPN_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\box.png" />
+    <Content Include="Resources\Card %281%29.png" />
+    <Content Include="Resources\dashboard.png" />
+    <Content Include="Resources\discord.png" />
+    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\giphy.gif" />
+    <Content Include="Resources\IMG_3463.png" />
+    <Content Include="Resources\IMG_34631.png" />
+    <Content Include="Resources\istockphoto-1494212658-612x612.jpg" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\Picsart_25-01-20_16-20-50-990.jpg" />
+    <Content Include="Resources\pie-chart.png" />
+    <Content Include="Resources\settings.png" />
+    <Content Include="Resources\signal %281%29.png" />
+    <Content Include="Resources\vpn %281%29.png" />
+    <Content Include="Resources\vpn.png" />
+    <Content Include="Resources\world-wide-web.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
