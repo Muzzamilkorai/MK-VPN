@@ -7,9 +7,6 @@ namespace VPN
     {
         private System.ComponentModel.IContainer components = null;
 
-        // New
-        private System.Windows.Forms.Timer slideTimer;
-
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,261 +17,209 @@ namespace VPN
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            pictureBox1 = new PictureBox();
-            leftBrandPanel = new GradientPanel();
-            button5 = new Button();
-            label2 = new Label();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            panelMain = new Panel();
-            gatewayLabel = new Label();
-            btnMinimize = new Button();
-            btnExit = new Button();
-            btnMenu = new Button();
-            slideTimer = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            leftBrandPanel.SuspendLayout();
-            panelMain.SuspendLayout();
-            SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.FromArgb(24, 34, 64);
-         //   pictureBox1.BackgroundImage = Properties.Resources.IMG_34631;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(64, 26);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(95, 81);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // leftBrandPanel
-            // 
-            leftBrandPanel.Controls.Add(button5);
-            leftBrandPanel.Controls.Add(label2);
-            leftBrandPanel.Controls.Add(button4);
-            leftBrandPanel.Controls.Add(button3);
-            leftBrandPanel.Controls.Add(button2);
-            leftBrandPanel.Controls.Add(button1);
-            leftBrandPanel.Controls.Add(pictureBox1);
-            leftBrandPanel.Dock = DockStyle.Left;
-            leftBrandPanel.GradientBottomRight = Color.FromArgb(14, 22, 40);
-            leftBrandPanel.GradientTopLeft = Color.FromArgb(24, 34, 64);
-            leftBrandPanel.Location = new Point(0, 0);
-            leftBrandPanel.Name = "leftBrandPanel";
-            leftBrandPanel.Size = new Size(0, 457);
-            leftBrandPanel.TabIndex = 15;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(24, 34, 64);
-            button5.Cursor = Cursors.Hand;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.White;
-         //   button5.Image = Properties.Resources.;
-            button5.Location = new Point(1, 369);
-            button5.Name = "button5";
-            button5.Size = new Size(235, 40);
-            button5.TabIndex = 20;
-            button5.Text = "   Exit";
-            button5.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(24, 34, 64);
-            label2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(35, 125);
-            label2.Name = "label2";
-            label2.Size = new Size(155, 32);
-            label2.TabIndex = 20;
-            label2.Text = "MAXGG VPN";
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(24, 34, 64);
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.White;
-           // button4.Image = Properties.Resources.settings;
-            button4.Location = new Point(0, 319);
-            button4.Name = "button4";
-            button4.Size = new Size(235, 40);
-            button4.TabIndex = 19;
-            button4.Text = "    Settings";
-            button4.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(24, 34, 64);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-          //  button3.Image = Properties.Resources.box;
-            button3.Location = new Point(1, 269);
-            button3.Name = "button3";
-            button3.Size = new Size(235, 40);
-            button3.TabIndex = 18;
-            button3.Text = "    Products";
-            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(24, 34, 64);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-          //  button2.Image = Properties.Resources.vpn__1_;
-            button2.Location = new Point(1, 219);
-            button2.Name = "button2";
-            button2.Size = new Size(235, 40);
-            button2.TabIndex = 17;
-            button2.Text = "    VPN Hub";
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(24, 34, 64);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-         //   button1.Image = Properties.Resources.dashboard;
-            button1.Location = new Point(0, 169);
-            button1.Name = "button1";
-            button1.Size = new Size(235, 40);
-            button1.TabIndex = 16;
-            button1.Text = "     Dashboard";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.gatewayLabel = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.leftBrandPanel = new VPN.GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMain.SuspendLayout();
+            this.leftBrandPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panelMain
             // 
-            panelMain.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panelMain.BackColor = Color.FromArgb(255, 128, 0);
-            panelMain.Controls.Add(gatewayLabel);
-            panelMain.Location = new Point(5, 30);
-            panelMain.Name = "panelMain";
-            panelMain.Padding = new Padding(22);
-            panelMain.Size = new Size(815, 424);
-            panelMain.TabIndex = 16;
-            panelMain.Paint += rightCard_Paint;
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.panelMain.Controls.Add(this.gatewayLabel);
+            this.panelMain.Location = new System.Drawing.Point(207, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Padding = new System.Windows.Forms.Padding(19);
+            this.panelMain.Size = new System.Drawing.Size(492, 367);
+            this.panelMain.TabIndex = 16;
             // 
             // gatewayLabel
             // 
-            gatewayLabel.Location = new Point(0, 0);
-            gatewayLabel.Name = "gatewayLabel";
-            gatewayLabel.Size = new Size(100, 23);
-            gatewayLabel.TabIndex = 1;
+            this.gatewayLabel.Location = new System.Drawing.Point(0, 0);
+            this.gatewayLabel.Name = "gatewayLabel";
+            this.gatewayLabel.Size = new System.Drawing.Size(86, 20);
+            this.gatewayLabel.TabIndex = 1;
             // 
             // btnMinimize
             // 
-            btnMinimize.BackColor = Color.FromArgb(12, 18, 34);
-            btnMinimize.Cursor = Cursors.Hand;
-            btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatAppearance.MouseDownBackColor = Color.FromArgb(18, 26, 48);
-            btnMinimize.FlatAppearance.MouseOverBackColor = Color.FromArgb(24, 34, 64);
-            btnMinimize.FlatStyle = FlatStyle.Flat;
-            btnMinimize.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnMinimize.ForeColor = Color.White;
-            btnMinimize.Location = new Point(750, -5);
-            btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(30, 25);
-            btnMinimize.TabIndex = 21;
-            btnMinimize.Text = "−";
-            btnMinimize.UseVisualStyleBackColor = false;
-            btnMinimize.Click += btnMinimize_Click;
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Location = new System.Drawing.Point(643, -4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(26, 22);
+            this.btnMinimize.TabIndex = 21;
+            this.btnMinimize.Text = "−";
+            this.btnMinimize.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.FromArgb(12, 18, 34);
-            btnExit.Cursor = Cursors.Hand;
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 0, 0);
-            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(48, 0, 0);
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(785, -5);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(30, 25);
-            btnExit.TabIndex = 22;
-            btnExit.Text = "×";
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(673, -4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(26, 22);
+            this.btnExit.TabIndex = 22;
+            this.btnExit.Text = "×";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // btnMenu
+            // leftBrandPanel
             // 
-            btnMenu.BackColor = Color.FromArgb(12, 18, 34);
-            btnMenu.Cursor = Cursors.Hand;
-            btnMenu.FlatAppearance.BorderSize = 0;
-            btnMenu.FlatStyle = FlatStyle.Flat;
-            btnMenu.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            btnMenu.ForeColor = Color.White;
-            btnMenu.Location = new Point(5, 5);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(40, 35);
-            btnMenu.TabIndex = 23;
-            btnMenu.Text = "☰";
-            btnMenu.UseVisualStyleBackColor = false;
-            btnMenu.Click += btnMenu_Click;
+            this.leftBrandPanel.Controls.Add(this.button5);
+            this.leftBrandPanel.Controls.Add(this.label2);
+            this.leftBrandPanel.Controls.Add(this.button4);
+            this.leftBrandPanel.Controls.Add(this.button2);
+            this.leftBrandPanel.Controls.Add(this.button1);
+            this.leftBrandPanel.Controls.Add(this.pictureBox1);
+            this.leftBrandPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftBrandPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(40)))));
+            this.leftBrandPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.leftBrandPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftBrandPanel.Name = "leftBrandPanel";
+            this.leftBrandPanel.Size = new System.Drawing.Size(207, 370);
+            this.leftBrandPanel.TabIndex = 15;
             // 
-            // slideTimer
+            // label2
             // 
-            slideTimer.Interval = 15;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(30, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 32);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "MAXGG VPN";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::VPN.Properties.Resources.logout;
+            this.button5.Location = new System.Drawing.Point(1, 275);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(201, 35);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "   Exit";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::VPN.Properties.Resources.settings;
+            this.button4.Location = new System.Drawing.Point(0, 232);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(201, 35);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "    Settings";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::VPN.Properties.Resources.vpn__1_;
+            this.button2.Location = new System.Drawing.Point(1, 190);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(201, 35);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "    VPN";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::VPN.Properties.Resources.dashboard;
+            this.button1.Location = new System.Drawing.Point(0, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 35);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "     Dashboard";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(64)))));
+            this.pictureBox1.BackgroundImage = global::VPN.Properties.Resources.MK_VPN_transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 70);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(12, 18, 34);
-            ClientSize = new Size(820, 457);
-            Controls.Add(btnMenu);
-            Controls.Add(btnExit);
-            Controls.Add(btnMinimize);
-            Controls.Add(panelMain);
-            Controls.Add(leftBrandPanel);
-            FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form2";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "MAX VPN HUB 1.0";
-            Load += Form2_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            leftBrandPanel.ResumeLayout(false);
-            leftBrandPanel.PerformLayout();
-            panelMain.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.ClientSize = new System.Drawing.Size(703, 370);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.leftBrandPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MAX VPN HUB 1.0";
+            this.panelMain.ResumeLayout(false);
+            this.leftBrandPanel.ResumeLayout(false);
+            this.leftBrandPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
         #endregion
 
         private PictureBox pictureBox1;
         private GradientPanel leftBrandPanel;
         private Button button1;
-        private Button button3;
         private Button button2;
         private Button button4;
         private Label label2;
@@ -283,6 +228,5 @@ namespace VPN
         private Label gatewayLabel;
         private Button btnMinimize;
         private Button btnExit;
-        private Button btnMenu; // new
     }
 }

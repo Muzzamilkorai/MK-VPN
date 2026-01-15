@@ -59,21 +59,7 @@ namespace VPN
                 BackColor = Color.FromArgb(110, 0, 0, 0),
                 Visible = false
             };
-            overlayPanel.Click += (s, e) => StartSlide(false);
-            panelMain.Controls.Add(overlayPanel);
-            overlayPanel.BringToFront();
-
-            // Animation timer (~60fps)
-            animTimer = new System.Windows.Forms.Timer { Interval = 15 };
-            animTimer.Tick += AnimTimer_Tick;
-
-            // Ensure starting positions
-            leftBrandPanel.Width = 0;
-            panelMain.Left = 0;
-
-            // Hook your menu button
-            btnMenu.Click += (s, e) => StartSlide(!navOpen);
-
+           
 
             //==============================================================
             this.Load += Form2_Load_RoundCorners;
@@ -83,45 +69,9 @@ namespace VPN
         private const int SlideSpeed = 15;
         private const int MaxWidth = 235; // full nav width
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            slideTimer.Start();
-        }
-
-        private void StartSlide(bool open)
-        {
-            navOpen = open;
-            overlayPanel.Visible = open; // show overlay immediately on open
-
-            fromWidth = leftBrandPanel.Width;
-            toWidth = open ? NavMaxWidth : 0;
-
-            animStart = DateTime.Now;
-            animTimer.Start();
-        }
-
-        private void AnimTimer_Tick(object sender, EventArgs e)
-        {
-            // progress 0..1 using elapsed time
-            double t = (DateTime.Now - animStart).TotalMilliseconds / AnimDurationMs;
-            if (t >= 1.0) t = 1.0;
-
-            // ease-out cubic for smooth finish
-            double eased = 1 - Math.Pow(1 - t, 3);
-
-            int w = (int)Math.Round(Lerp(fromWidth, toWidth, eased));
-
-            // Apply to both sidebar and content (push layout like mobile)
-            leftBrandPanel.Width = w;
-            panelMain.Left = w;
-
-            if (t >= 1.0)
-            {
-                animTimer.Stop();
-                if (w == 0) overlayPanel.Visible = false; // hide overlay when closed
-            }
-        }
-
+       
+      
+       
         private static double Lerp(double a, double b, double t) => a + (b - a) * t;
 
         // Turns on true double-buffering (reduces flicker)
@@ -263,6 +213,11 @@ namespace VPN
                 Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
                 this.Location = Point.Add(dragFormPoint, new Size(dif));
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void Form2_MouseUp(object sender, MouseEventArgs e)

@@ -122,6 +122,7 @@
     <Content Include="Resources\box.png" />
     <Content Include="Resources\Card %281%29.png" />
     <Content Include="Resources\dashboard.png" />
+    <None Include="Resources\dashboard1.png" />
     <Content Include="Resources\discord.png" />
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\giphy.gif" />
@@ -129,11 +130,14 @@
     <Content Include="Resources\IMG_34631.png" />
     <Content Include="Resources\istockphoto-1494212658-612x612.jpg" />
     <Content Include="Resources\logout.png" />
+    <None Include="Resources\logout1.png" />
     <Content Include="Resources\Picsart_25-01-20_16-20-50-990.jpg" />
     <Content Include="Resources\pie-chart.png" />
     <Content Include="Resources\settings.png" />
+    <None Include="Resources\settings1.png" />
     <Content Include="Resources\signal %281%29.png" />
     <Content Include="Resources\vpn %281%29.png" />
+    <None Include="Resources\vpn %281%291.png" />
     <Content Include="Resources\vpn.png" />
     <Content Include="Resources\world-wide-web.png" />
   </ItemGroup>
